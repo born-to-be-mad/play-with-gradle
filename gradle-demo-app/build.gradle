@@ -1,0 +1,47 @@
+// Gradle init script has features that generate a light skeleton of our project, 
+// as well as some of the configuration files associated with Gradle.
+// add a Java Library and Application Plugins
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+// use these plug-ins
+apply plugin: 'application'
+//  add a fully-qualified name of the main class
+mainClassName = 'employee.EmployeeApp'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+println 'This is executed during configuration phase'
+
+// A task represents a piece of work that a build performs such as compiling the source code.
+// gradle build is the primary task and the one most used.
+task configured {
+    println 'The project is configured'
+}
+
+// we can run the task by using gradle wrapper
+task wrapper_5(type: Wrapper){
+    gradleVersion = '5.3.1'
+}
+// mavenCentral() or jcenter() for  downloading dependency jars.
+repositories {
+    jcenter()
+}
+
+// To implement, add testImplementation and testRuntime parts in the dependencies configuration.
+// we are adding Apache Commons and JUnit library.
+dependencies {
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    testImplementation('junit:junit:4.13')
+    testRuntime('junit:junit:4.13')
+}
+// gradle clean test
+test {
+    useJUnit()
+}
