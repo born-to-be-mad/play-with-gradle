@@ -1,12 +1,12 @@
 //groovy DSL
 task hello {
   doLast {
-    print "Hello world!"
+    print "Hello world, version = " + version
   }
 }
 
 task bye {
-    doLast {
-        print "Bye world!"
-    }
+  doLast {
+    print "Bye world!"
+  }
 }
