@@ -1,6 +1,12 @@
-//groovy DSL
+//configuration code
 task hello {
+  //configuration code
+  doFirst {
+    //execution code
+    print "Starting"
+  }
   doLast {
+    //execution code
     print "Hello world, version = " + version
   }
 }
@@ -18,7 +24,7 @@ task copyDocs(type: Copy) {
   includeEmptyDirs = false
 }
 
-task createZip(type:Zip){
+task createZip(type: Zip) {
   from "build/docs"
   archiveFileName = "docs.zip"
   destinationDirectory = file("build/dist")
