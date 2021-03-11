@@ -7,7 +7,8 @@ Build lifecycle phases:
 
 `gradle tasks --all` - see full list of tasks
 `gradle hello --dry-run` - check the tasks without executing
+`gradle createArchive --console=verbose` - to see the outcomes of tasks
 
 # Useful links
 * Gradle Guides: https://gradle.org/guides/
-* Gradle Javadoc: https://docs.gradle.org/current/dsl/org.gradle.api.tasks.javadoc.Javadoc.html
+* Gradle Javadoc: https://docs.gradle.org/current/dsl/
