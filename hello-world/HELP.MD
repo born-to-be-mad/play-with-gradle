@@ -25,6 +25,8 @@ Build lifecycle phases:
 `gradle distZip` create zip-archive
 `gradle distTar` create tar-archive
 `gradle javadoc`
+`gradle compileTestJava`
+`gradle test`
 
 # Useful links
 * Gradle Guides: https://gradle.org/guides/
