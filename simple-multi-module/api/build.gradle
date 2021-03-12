@@ -1,0 +1,27 @@
+plugins {
+  id 'maven-publish'
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      groupId = 'by.dma'
+      artifactId = 'calculator'
+      from components.java
+    }
+  }
+  repositories {
+    maven {
+      url = "$rootProject.buildDir/m2repo"
+    }
+/*
+ // in case of custom repository
+ maven {
+      url = 'http://localhost:8082/artifactory/libs-release-local/'
+      credentials {
+        username = 'admin'
+        password = 'admin_123'
+      }
+    }*/
+  }
+}

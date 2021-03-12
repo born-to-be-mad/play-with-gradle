@@ -1,0 +1,16 @@
+plugins {
+  id 'application'
+}
+
+application {
+  mainClass = 'by.dma.calculator.Main'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation project(':api')
+  implementation 'commons-cli:commons-cli:1.4'
+}

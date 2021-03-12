@@ -6,8 +6,11 @@ Build lifecycle phases:
 - execution
 
 ## Gradle commands
-* own tasks
+* general
 `gradle tasks --all` - see full list of tasks
+`gradle dependencies` - see dependencies
+  
+* own tasks
 `gradle hello --dry-run` - check the tasks without executing
 `gradle createArchive --console=verbose` - to see the outcomes of tasks
 
